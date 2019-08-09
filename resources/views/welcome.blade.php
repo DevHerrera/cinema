@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <script src="https://kit.fontawesome.com/17c4b0656d.js"></script>
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -12,10 +12,11 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                max-height: 100%;
+                background-color: #1a1a1a;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
+                color: #ffffff;
                 height: 100vh;
                 margin: 0;
             }
@@ -68,12 +69,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" style="color:white">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" style="color:white">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" style="color:white">Register</a>
                         @endif
                     @endauth
                 </div>
@@ -81,17 +82,18 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Cinema
+                </div>
+                <div>
+                    <p>An ebook library system built in Laravel</p>
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/devherrera/cinema">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                        <span>@devherrera</span>
+                    </a>
                 </div>
             </div>
         </div>
